@@ -6,37 +6,37 @@
                 <template v-for="(item,idx) in formList">
                     <!--INPUT-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='INPUT'">
-                        <el-input size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.ableFlag" />
+                        <el-input size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.vCantInput" />
                     </el-form-item>
                     <!--TEXTAREA-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='TEXTAREA'">
-                        <el-input type="textarea" :rows="3" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.ableFlag" style="width: 100%" />
+                        <el-input type="textarea" :rows="3" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.vCantInput" style="width: 100%" />
                     </el-form-item>
 
                     <!--OPTIONS-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='OPTIONS'">
-                        <el-select size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.ableFlag" style="width: 100%" @change="SELECT_FUN(idx,item.prop)">
+                        <el-select size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.vCantInput" style="width: 100%" @change="SELECT_FUN(idx,item.prop)">
                             <el-option v-for="(dict,index) in verificationtypeList" :key="index" :label="dict.name" :value="dict.id"></el-option>
                         </el-select>
                     </el-form-item>
                     <!--DIC-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='DIC'">
-                        <el-select size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.ableFlag" style="width: 100%" @change="SELECT_FUN(idx,item.prop)">
+                        <el-select size="small" v-model="formFields[item.prop]" :placeholder="item.label" :disabled="item.vCantInput" style="width: 100%" @change="SELECT_FUN(idx,item.prop)">
                             <el-option v-for="(dict,index) in verificationtypeList" :key="index" :label="dict.name" :value="dict.id"></el-option>
                         </el-select>
                     </el-form-item>
                     <!--LIST-->
                     <el-form-item class="cursor" label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='LIST'">
-                        <el-input v-model="formFields[item.prop]" size="small" suffix-icon="el-icon-more" :placeholder="item.ableFlag" :disabled="item.status" @click.native="OPEN_FUN(idx,item.prop)" disabled></el-input>
+                        <el-input v-model="formFields[item.prop]" size="small" suffix-icon="el-icon-more" :placeholder="item.label" @click.native="OPEN_FUN(idx,item.prop)" disabled></el-input>
                     </el-form-item>
 
                     <!--DATE-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='DATE'">
-                        <el-date-picker clearable :picker-options="pickerOptions" size="small" style="width: 100%" v-model="formFields[item.prop]" :type="item.miniType||'date'" :value-format="item.format" :placeholder="item.label" :disabled="item.ableFlag"></el-date-picker>
+                        <el-date-picker clearable :picker-options="pickerOptions" size="small" style="width: 100%" v-model="formFields[item.prop]" :type="item.secondaryType||'date'" :value-format="item.format" :placeholder="item.label" :disabled="item.vCantInput"></el-date-picker>
                     </el-form-item>
 
                     <!--SLOT-->
-                    <slot :name="item.prop" v-if="item.vIf&&item.type==='SLOT'">{{'SLOTName:'+item.prop}}</slot>
+                    <slot :name="item.prop" v-if="item.vIf&&item.type==='SLOT'">{{'SLOTNAME:'+item.prop}}</slot>
                 </template>
             </el-form>
         </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { NFormData } from './NData.js'
+import { NFormData, randowText } from './NData.js'
 
 // import NDialog from "./NDialog.vue";
 
@@ -82,7 +82,8 @@ export default {
     data() {
         return {
             formFields: {
-                ccc: '2021-08-26',
+                ccc: randowText(),
+                ttt: '2055-02-02',
                 woo: 2
             },
             pickerOptions: [],

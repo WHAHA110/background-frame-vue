@@ -66,7 +66,7 @@
             </div>
         </template>
         <!-- 可编辑表单 row-->
-        <template v-if="contentArr.includes('editFormRow')&&activeName==='tags2'">
+        <template v-if="contentArr.includes('tagsFormRow')&&activeName==='tags2'">
             <div style="padding:10px 0">
                 <N-form formHeigth formType="el-form-row" ref="N-form1">
                     <div class="s-btn" slot="slot1">
@@ -77,7 +77,7 @@
             </div>
         </template>
         <!-- 可编辑表单 col-->
-        <template v-if="contentArr.includes('editFormCol')&&activeName==='tags3'">
+        <template v-if="contentArr.includes('tagsFormCol')&&activeName==='tags3'">
             <div style="padding:10px 0">
                 <N-form formHeigth="700px" formType="el-form-col" ref="N-form1">
                     <div class="s-btn" slot="slot1">
@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import { NTableData } from './NData.js'
+import { NTableData, randowText } from './NData.js'
 import NForm from '@/components/NComponents/NForm.vue'
 import NDialog from '@/components/NComponents/NDialog.vue'
 export default {
@@ -106,7 +106,7 @@ export default {
         contentArr: {
             type: Array,
             default: function () {
-                return ['form', 'btns', 'tags', 'editTable', 'page', 'editFormRow', 'editFormCol']
+                return ['form', 'btns', 'tags', 'editTable', 'page', 'tagsFormRow', 'tagsFormCol']
             }
         },
         dialogWidth: {
@@ -127,7 +127,7 @@ export default {
         return {
             activeName: 'tags1',
             formFields_: {
-                xxx: '2021-08-26',
+                xxx: randowText(),
                 woo: 2
             },
             dialogTableVisible: false,
@@ -181,24 +181,29 @@ export default {
     .el-form-row {
         justify-content: flex-start;
     }
-    .el-form-item__label {
-        display: inline-block;
-        font-size: 12px;
-        width: 78px !important;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding-right: 4px;
-        // text-align: right;
-    }
+
     .el-form-item {
         width: 19%;
         max-width: 325px;
         min-width: 250px;
         margin-left: 9px;
-        margin-bottom: 0px;
         overflow: hidden;
         display: flex;
+        margin-bottom: 3px;
+        .el-form-item__label,
+        .el-form-item__content {
+            height: 32px;
+            line-height: 32px;
+        }
+        .el-form-item__label {
+            display: inline-block;
+            font-size: 12px;
+            width: 78px !important;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 4px;
+        }
         .el-form-item__content {
             flex: 1;
             margin-left: 0px;
@@ -209,6 +214,7 @@ export default {
         display: flex;
         align-items: center;
         margin-left: 16px;
+        margin-bottom: 3px;
     }
 }
 
@@ -216,13 +222,16 @@ export default {
     &.btns {
         display: flex;
         justify-content: flex-start;
-        padding-bottom: 5px;
+        padding-bottom: 3px;
         // border: 1px solid #ccc;
     }
 }
 ::v-deep.tagsBox {
     .el-tabs--border-card > .el-tabs__content {
         padding: 0px;
+    }
+    .el-tabs--border-card {
+        box-shadow: none;
     }
 }
 ::v-deep.tableBox {

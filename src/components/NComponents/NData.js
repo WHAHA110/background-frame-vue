@@ -1,670 +1,684 @@
 function randowText() {
-    var a = Math.random() + "" //产生一个随机数
+  var a = Math.random() + ""; //产生一个随机数
 
-var rand1 = a.charAt(5) //的到这个数的第五个字符(实际还是从0~9的数字)
+  var rand1 = a.charAt(5); //的到这个数的第五个字符(实际还是从0~9的数字)
 
-var quotes = new Array() //创建消息数组
+  var quotes = new Array(); //创建消息数组
 
-quotes[1] = '欢迎光临' //这里分配十句随机出现的文本
+  quotes[1] = "Helen Hernandez"; //这里分配十句随机出现的文本
 
-quotes[2] = '请注意本信息'
+  quotes[2] = "Melissa Garcia";
 
-quotes[3] = '感谢你使用本书'
+  quotes[3] = "Elizabeth Wilson";
 
-quotes[4] = 'javascript，不错的特效语言'
+  quotes[4] = "Richard Hall";
 
-quotes[5] = 'javascript不是java'
+  quotes[5] = "Helen Hernandez";
 
-quotes[6] = '本特效可以用于写欢迎词'
+  quotes[6] = "UI偶一一条鱼i";
 
-quotes[7] = '每次进入，这里的信息都可以刷新'
+  quotes[7] = "Elizabeth Wilson";
 
-quotes[8] = '我爱javascript'
+  quotes[8] = "Nancy Miller ";
 
-quotes[9] = 'javascript，美丽的语言'
+  quotes[9] = "Nancy Miller";
 
-quotes[0] = 'javascript简单，方便'
+  quotes[0] = "Richard Hall";
 
-var quote = quotes[rand1] //由随机数选择一句话
+  var quote = quotes[rand1]; //由随机数选择一句话
 
-return quote
-};
+  return quote;
+}
 
 const NTableData = {
   tableList: [
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' },
-    { ccc: randowText(), ddd: randowText() + ' ddd' }
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" },
+    { ccc: randowText(), ddd: randowText() + " ddd" }
   ],
   formList_: [
     {
-      type: 'SLOT',
-      miniType: 1,
-      label: '山东分公司的',
-      prop: 'slot0',
-      ableFlag: true,
+      type: "SLOT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "slot0",
+      vCantInput: true,
       vIf: true
     },
     {
-      type: 'DIC',
-      miniType: 2,
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DIC",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: false
     },
     {
-      type: 'INPUT',
-      miniType: 2,
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      miniType: 'date',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      secondaryType: "date",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      miniType: 1,
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      miniType: 2,
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      miniType: 2,
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      miniType: 'date',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      secondaryType: "date",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      miniType: 1,
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'SLOT',
-      miniType: 1,
-      label: '山东分公司的',
-      prop: 'slot1',
-      ableFlag: false,
+      type: "SLOT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "slot1",
+      vCantInput: false,
       vIf: true
     }
   ],
   tableThList: [
     {
-      label: '给第三方',
-      prop: 'ccc',
+      label: randowText(),
+      prop: "ccc",
       subTh: [
         {
-          label: '给第三方',
-          prop: 'ddd',
-          type: 'TEXT',
+          label: randowText(),
+          prop: "ddd",
+          type: "TEXT",
           subTh: []
         },
         {
-          label: '山东分公司的',
-          prop: 'ddd',
-          type: 'TEXT',
+          label: randowText(),
+          prop: "ddd",
+          type: "TEXT",
           subTh: []
         }
       ]
     },
     {
-      label: '山东分公司的',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '山东分公司的2',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '山东分公司的个',
-      prop: 'ccc',
-      type: 'INPUT',
+      label: randowText(),
+      prop: "ccc",
+      type: "INPUT",
       subTh: []
     },
     {
-      label: '阿斯顿发',
-      type: 'DATE',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      type: "DATE",
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '山东分公司的',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '山东分公司的2',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '山东分公司的个',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     },
     {
-      label: '阿斯顿发',
-      prop: 'ccc',
-      type: 'TEXT',
+      label: randowText(),
+      prop: "ccc",
+      type: "TEXT",
       subTh: []
     }
   ]
-}
+};
 const NDialogData = {
-  tableList: [{ ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }, { ccc: Math.random() }],
+  tableList: [
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() },
+    { ccc: randowText() }
+  ],
   formList_: [
     {
-      type: 'DIC',
-      miniType: 2,
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DIC",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: false
     },
     {
-      type: 'INPUT',
-      miniType: 2,
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 2,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      miniType: 'date',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      secondaryType: "date",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      miniType: 1,
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      miniType: 'date',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      secondaryType: "date",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-        type: 'SLOT',
-        miniType: 1,
-        label: '山东分公司的',
-        prop: 'slot1',
-        ableFlag: false,
-        vIf: true
-      }
+      type: "SLOT",
+      secondaryType: 1,
+      label: randowText(),
+      prop: "slot1",
+      vCantInput: false,
+      vIf: true
+    }
   ],
   tableThList: [
     {
-      label: '给第三方',
-      type: 'INPUT',
-      miniType: 1,
-      prop: 'ccc'
+      label: randowText(),
+      type: "INPUT",
+      secondaryType: 1,
+      prop: "ccc"
     },
     {
-      label: '山东分公司的',
-      type: 'SELECT',
-      miniType: 1,
-      prop: 'ccc'
+      label: randowText(),
+      type: "SELECT",
+      secondaryType: 1,
+      prop: "ccc"
     },
     {
-      label: '山东分公司的2',
-      type: 'SELECT',
-      miniType: 2,
-      prop: 'ccc'
+      label: randowText(),
+      type: "SELECT",
+      secondaryType: 2,
+      prop: "ccc"
     },
     {
-      label: '山东分公司的个',
-      type: 'INPUT',
-      miniType: 2,
-      prop: 'ccc'
+      label: randowText(),
+      type: "INPUT",
+      secondaryType: 2,
+      prop: "ccc"
     },
     {
-      label: '阿斯顿发',
-      type: 'DATE',
-      miniType: 'date',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc'
+      label: randowText(),
+      type: "DATE",
+      secondaryType: "date",
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ccc"
     },
     {
-      label: '山东分公司的',
-      type: 'SELECT',
-      miniType: 1,
-      prop: 'ccc'
+      label: randowText(),
+      type: "SELECT",
+      secondaryType: 1,
+      prop: "ccc"
     },
     {
-      label: '山东分公司的2',
-      type: 'SELECT',
-      miniType: 2,
-      prop: 'ccc'
+      label: randowText(),
+      type: "SELECT",
+      secondaryType: 2,
+      prop: "ccc"
     },
     {
-      label: '山东分公司的个',
-      type: 'TEXTAREA',
-      miniType: 2,
-      prop: 'ccc'
+      label: randowText(),
+      type: "TEXTAREA",
+      secondaryType: 2,
+      prop: "ccc"
     },
     {
-      label: '阿斯顿发',
-      type: 'DATE',
-      miniType: 'date',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc'
+      label: randowText(),
+      type: "DATE",
+      secondaryType: "date",
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ccc"
     }
   ]
-}
+};
 const NFormData = {
   formList: [
     {
-      type: 'OPTIONS', //显示类型
-      label: '山东分公司的', //显示名称
-      prop: 'ccc', //提交字段名称
-      ableFlag: false, //是否可输入
+      type: "OPTIONS", //显示类型
+      label: randowText(),
+      prop: "ccc", //提交字段名称
+      vCantInput: false, //是否可输入
       vIf: true //是否可显示
     },
     {
-      type: 'DIC',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DIC",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: false
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'INPUT',
-      label: '给第三方',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "INPUT",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'LIST',
-      label: '山东分公司的2',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "LIST",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'TEXTAREA',
-      label: '山东分公司的个',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "TEXTAREA",
+      label: randowText(),
+      prop: "ccc",
+      vCantInput: false,
       vIf: true
     },
     {
-      type: 'DATE',
-      label: '阿斯顿发',
-      format: 'yyyy-MM-dd',
-      prop: 'ccc',
-      ableFlag: false,
+      type: "DATE",
+      label: randowText(),
+      format: "yyyy-MM-dd 00:00:00",
+      prop: "ttt",
+      vCantInput: false,
       vIf: true
     }
   ]
-}
-export { NTableData, NDialogData, NFormData }
+};
+export { NTableData, NDialogData, NFormData, randowText };

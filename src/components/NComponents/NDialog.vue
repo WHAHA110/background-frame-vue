@@ -126,7 +126,7 @@ export default {
 
 .NDialog .el-dialog__body {
     padding-top: 0px;
-    padding-bottom: 10px;
+    // padding-bottom: 20px;
 }
 </style>
 <style lang="scss" scoped>
@@ -135,16 +135,7 @@ export default {
     .el-form-row {
         justify-content: flex-start;
     }
-    .el-form-item__label {
-        display: inline-block;
-        font-size: 12px;
-        width: 78px !important;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding-right: 4px;
-        // text-align: right;
-    }
+
     .el-form-item {
         width: 19%;
         max-width: 325px;
@@ -153,6 +144,22 @@ export default {
         margin-bottom: 0px;
         overflow: hidden;
         display: flex;
+        margin-bottom: 3px;
+        .el-form-item__label,
+        .el-form-item__content {
+            height: 32px;
+            line-height: 32px;
+        }
+        .el-form-item__label {
+            display: inline-block;
+            font-size: 12px;
+            width: 78px !important;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 4px;
+            // text-align: right;
+        }
         .el-form-item__content {
             flex: 1;
             margin-left: 0px;
@@ -163,6 +170,7 @@ export default {
         display: flex;
         align-items: center;
         margin-left: 16px;
+        margin-bottom: 3px;
     }
 }
 
