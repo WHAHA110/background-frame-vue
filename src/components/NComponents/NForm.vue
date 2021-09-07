@@ -32,7 +32,7 @@
 
                     <!--DATE-->
                     <el-form-item label-width :label="item.label" :key="item.prop+idx" prop v-if="item.vIf&&item.type==='DATE'">
-                        <el-date-picker clearable :picker-options="pickerOptions" size="small" style="width: 100%" v-model="formFields[item.prop]" :type="item.secondaryType||'date'" :value-format="item.format" :placeholder="item.label" :disabled="item.vCantInput"></el-date-picker>
+                        <el-date-picker clearable :picker-options="pickerOptions" size="small" style="width: 100%" v-model="formFields[item.prop]" :type="item.secondaryType||'date'" :value-format="item.format" :format="item.format" :placeholder="item.label" :disabled="item.vCantInput"></el-date-picker>
                     </el-form-item>
 
                     <!--SLOT-->

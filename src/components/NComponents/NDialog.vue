@@ -139,7 +139,7 @@ export default {
     .el-form-item {
         width: 19%;
         max-width: 325px;
-        min-width: 250px;
+        min-width: 258px;
         margin-left: 9px;
         margin-bottom: 0px;
         overflow: hidden;
